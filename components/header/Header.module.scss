@@ -1,0 +1,17 @@
+@import '../../partials/_variables';
+
+.header_container {
+  background: rgba($color: #808080, $alpha: 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 0.5px rgba($color: $color_neutral_500, $alpha: 0.3) solid;
+  margin-bottom: 4rem;
+}
+
+@media (421px<=width) {
+  .header_container {
+    visibility: hidden;
+  }
+}

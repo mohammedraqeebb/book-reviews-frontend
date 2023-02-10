@@ -1,0 +1,28 @@
+@import '../../partials/variables';
+
+.button_container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  background: $color_primary_900;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: $color_neutral_100;
+  font-family: Inter, 'sans-serif';
+
+  font-size: 1rem;
+  padding: 8px 16px;
+  font-weight: 600;
+  &:hover {
+    background: transparent;
+    color: $color_primary_900;
+    border: 2px solid $color_primary_900;
+  }
+}
+.button_container.disabled {
+  background-color: $color_primary_300;
+  border: none;
+  color: #f5f5f5;
+}

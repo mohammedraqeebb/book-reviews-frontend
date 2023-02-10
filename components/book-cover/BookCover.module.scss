@@ -1,0 +1,44 @@
+@import '../../partials/variables';
+
+.book_cover_wrapper {
+  cursor: pointer;
+  height: 26rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color_neutral_700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 4px;
+  .book_cover_container {
+    height: 25rem;
+    width: 13rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid $color_neutral_400;
+
+    color: white;
+    .book_name {
+      margin-top: 4rem;
+      font-size: clamp(12px, 16px, 20px);
+      margin-bottom: 2rem;
+    }
+    .authors_container {
+      max-height: 10rem;
+      overflow-y: scroll;
+      .book_author_name {
+        font-size: clamp(8px, 10px, 12px);
+      }
+    }
+  }
+}
+
+@media screen and (701px<= width<=1000px) {
+  .book_cover_wrapper {
+    height: 30rem;
+    width: 15rem;
+    .book_cover_container {
+      height: 29rem;
+      width: 14rem;
+    }
+  }
+}

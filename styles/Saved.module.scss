@@ -1,0 +1,31 @@
+.saved_page_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .saved_page_container {
+    max-width: 1000px;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: min(80%, 450px);
+  }
+}
+
+@media screen and (421px<=width<=700px) {
+  .saved_page_wrapper {
+    .saved_page_container {
+      width: min(80%, 600px);
+    }
+  }
+}
+
+@media screen and (701px<=width) {
+  .saved_page_wrapper {
+    .saved_page_container {
+      width: min(80%, 800px);
+    }
+  }
+}

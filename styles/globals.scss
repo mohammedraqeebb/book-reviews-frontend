@@ -1,0 +1,82 @@
+@import '../partials/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: Inter, 'sans-serif';
+  caret-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+@font-face {
+  font-family: 'Uber Move Regular';
+  src: url(../static/fonts/UberMove-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Uber Move Medium';
+  src: url(../static/fonts/UberMove-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Uber Move Bold';
+  src: url(../static/fonts/UberMove-Bold.ttf) format('truetype');
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Uber Move Regular';
+  line-height: 125%;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+.error_container {
+  padding: 0.2rem;
+  text-align: left;
+  width: auto;
+  max-width: 100%;
+  color: $color_red_error;
+  font-size: 0.8rem;
+  margin-top: -1rem;
+}
+.book_biography {
+  background: linear-gradient(#53575b, #d3d3d3);
+}
+.book_personality_development {
+  background: linear-gradient(to right, #ff5d8f 100%, #4d2733 0%);
+}
+.book_comics {
+  background: linear-gradient(#023e8a, #3ba9f6);
+}
+
+.book_novel {
+  background: linear-gradient(#5f7470, #e0e2db);
+}
+.book_horror {
+  background: linear-gradient(#9d6b53, #deab90);
+}
+.book_fiction {
+  background: linear-gradient(#2a9d8f, #619891);
+}

@@ -1,0 +1,146 @@
+@import '../../partials/variables';
+
+.comment_container {
+  width: 100%;
+  min-height: 5.2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .comment_first_row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .logo_and_name_time_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      .comment_name_logo {
+        height: 2.4rem;
+        width: 2.4rem;
+        background: $color_neutral_200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .commentor_name {
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        text-transform: capitalize;
+      }
+      .comment_time {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $color_neutral_500;
+      }
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      gap: 0.6rem;
+      cursor: pointer;
+    }
+  }
+  .comment_second_row {
+    width: 100%;
+    .comment_text {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+    .comment_input_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+
+      textarea {
+        height: 2.4rem;
+        width: 300px;
+        outline: none;
+        border: none;
+
+        font-size: 1.2rem;
+        padding-bottom: 0.6rem;
+        padding-left: 0.4rem;
+        border-bottom: 1px solid black;
+
+        &::placeholder {
+          margin: auto;
+          font-size: 1rem;
+        }
+      }
+      button {
+        border: none;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+@media screen and (420px<=width) {
+  .comment_container {
+    .comment_first_row {
+      .logo_and_name_time_container {
+        .comment_name_logo {
+          height: 2.8rem;
+          width: 2.8rem;
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+        .commentor_name {
+          font-size: 1.4rem;
+          color: $color_neutral_700;
+          font-weight: 400;
+        }
+        .comment_time {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: $color_neutral_500;
+        }
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        gap: 0.6rem;
+        cursor: pointer;
+      }
+    }
+    .comment_second_row {
+      width: 100%;
+      .comment_text {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+      .comment_input_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+
+        textarea {
+          height: 2.6rem;
+          width: 70%;
+          max-width: 600px;
+          outline: none;
+          border: none;
+
+          font-size: 1.4rem;
+
+          &::placeholder {
+            margin: auto;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

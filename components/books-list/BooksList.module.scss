@@ -1,0 +1,14 @@
+.books_list_component {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 100%;
+  .books_list_container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

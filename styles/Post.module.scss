@@ -1,0 +1,50 @@
+@import '../partials/variables';
+.post_wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .post_form_wrapper {
+    width: min(80%, 350px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form_container {
+      position: relative;
+      width: 80%;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+      h4 {
+        text-align: center;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      .author_container,
+      .publisher_container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+
+      .create_author_page_link_container,
+      .create_publisher_page_link_container {
+        display: flex;
+        gap: 0.2rem;
+        p {
+          font-size: 0.8rem;
+        }
+        a {
+          font-size: 0.8rem;
+          color: $color_primary_700;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

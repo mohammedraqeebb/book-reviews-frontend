@@ -1,0 +1,41 @@
+@import '../partials/variables';
+.create_author_wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .create_author_form_wrapper {
+    width: min(80%, 350px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form_container {
+      position: relative;
+      width: 80%;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+      h4 {
+        text-align: center;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      .phone_number_container {
+        display: flex;
+        gap: 0.6rem;
+        .country_code_container {
+          flex: 1.5;
+        }
+        .phone_number_container {
+          flex: 3;
+        }
+      }
+      .state_and_country_container {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+}

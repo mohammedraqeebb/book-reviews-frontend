@@ -1,0 +1,222 @@
+@import '../partials/variables';
+
+.publisher_page_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .publisher_page_container {
+    max-width: 1000px;
+    padding: 0rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+    gap: 2rem;
+    align-items: center;
+    .publisher_details_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem;
+      width: 100%;
+      height: 100%;
+      .publisher_logo {
+        width: 12rem;
+        height: 12rem;
+        aspect-ratio: 1/1;
+        letter-spacing: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_neutral_400;
+        user-select: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .publisher_details {
+        .publisher_name {
+          text-align: center;
+          letter-spacing: 1px;
+          margin-bottom: 0.6rem;
+          text-transform: capitalize;
+        }
+        .publisher_date {
+          text-align: center;
+          font-size: 1.4rem;
+          color: $color_neutral_700;
+          margin-bottom: 0.8rem;
+        }
+        .publisher_bio {
+          font-size: 1.2rem;
+          letter-spacing: 0.2px;
+          margin-bottom: 1.6rem;
+          line-height: 1.6rem;
+          font-weight: 500;
+        }
+        .publisher_address {
+          display: flex;
+          gap: 0.6rem;
+          flex-direction: column;
+          .publisher_address_header {
+            text-decoration: underline;
+            font-size: 1.6rem;
+            letter-spacing: 0.2px;
+            font-weight: 600;
+          }
+          .publisher_street {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+          }
+          .publisher_state_and_coutry {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            .publisher_state,
+            .publisher_country {
+              font-size: 1.4rem;
+              font-weight: 500;
+            }
+          }
+          .publisher_phone_number {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .books_container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 0rem 1rem 0 1rem;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (421px<=width<=700px) {
+  .publisher_page_wrapper {
+    .publisher_page_container {
+      max-width: 60rem;
+
+      .publisher_details_container {
+        gap: 3rem;
+        max-width: 100%;
+
+        .publisher_logo {
+          width: 14rem;
+          height: 14rem;
+        }
+        .publisher_details {
+          .publisher_bio {
+            font-size: 1.2rem;
+            letter-spacing: 0.2px;
+            margin-bottom: 1.6rem;
+            line-height: 1.6rem;
+            font-weight: 500;
+            max-width: 50rem;
+          }
+          .publisher_address {
+            display: flex;
+            gap: 0.6rem;
+            flex-direction: column;
+            .publisher_address_header {
+              text-decoration: underline;
+              font-size: 1.6rem;
+              letter-spacing: 0.2px;
+              font-weight: 600;
+            }
+            .publisher_street {
+              font-size: 1.4rem;
+              margin-bottom: 0.4rem;
+              font-weight: 500;
+            }
+            .publisher_state_and_coutry {
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              .publisher_state,
+              .publisher_country {
+                font-size: 1.4rem;
+                font-weight: 500;
+              }
+            }
+            .publisher_phone_number {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .books_container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        max-width: 60rem;
+      }
+    }
+  }
+}
+@media screen and (701px<=width<=1000px) {
+  .publisher_page_wrapper {
+    .publisher_page_container {
+      max-width: 60rem;
+
+      .publisher_details_container {
+        gap: 3rem;
+        max-width: 100%;
+
+        .publisher_logo {
+          width: 14rem;
+          height: 14rem;
+        }
+        .publisher_details {
+          .publisher_bio {
+            font-size: 1.2rem;
+            letter-spacing: 0.2px;
+            margin-bottom: 1.6rem;
+            line-height: 1.6rem;
+            font-weight: 500;
+            max-width: 50rem;
+          }
+          .publisher_address {
+            display: flex;
+            gap: 0.6rem;
+            flex-direction: column;
+            .publisher_address_header {
+              text-decoration: underline;
+              font-size: 1.6rem;
+              letter-spacing: 0.2px;
+              font-weight: 600;
+            }
+            .publisher_street {
+              font-size: 1.4rem;
+              margin-bottom: 0.4rem;
+              font-weight: 500;
+            }
+            .publisher_state_and_coutry {
+              display: flex;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+              .publisher_state,
+              .publisher_country {
+                font-size: 1.4rem;
+                font-weight: 500;
+              }
+            }
+            .publisher_phone_number {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .books_container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        align-self: flex-start;
+      }
+    }
+  }
+}
