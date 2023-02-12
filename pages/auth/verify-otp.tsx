@@ -20,9 +20,19 @@ const VerifyOTP = () => {
   const [email, setEmail] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClick = () => {
+  const handleKeyBoardShow = () => {
     if (activeIndex === 0) {
       setActiveIndex(0);
+      const virtualInput = document.createElement('input');
+      virtualInput.style.position = 'fixed';
+      virtualInput.style.left = '100vw';
+      virtualInput.style.top = '100vh';
+      virtualInput.type = 'number';
+      document.body.appendChild(virtualInput);
+      virtualInput.focus();
+      virtualInput.addEventListener('blur', () => {
+        document.body.removeChild(virtualInput);
+      });
     }
   };
   const { doRequest, errors } = useRequest({
@@ -63,18 +73,6 @@ const VerifyOTP = () => {
       }
     }
   };
-  const handleKeyBoardShow = (event: MouseEvent<HTMLFormElement>) => {
-    const virtualInput = document.createElement('input');
-    virtualInput.style.position = 'fixed';
-    virtualInput.style.left = '100vw';
-    virtualInput.style.top = '100vh';
-    virtualInput.type = 'number';
-    document.body.appendChild(virtualInput);
-    virtualInput.focus();
-    virtualInput.addEventListener('blur', () => {
-      document.body.removeChild(virtualInput);
-    });
-  };
 
   useEffect(() => {
     if (timer <= 0) {
@@ -90,16 +88,12 @@ const VerifyOTP = () => {
       <div className={styles.otp_container}>
         <div
           className={styles.otp_input_container}
-          onClick={handleClick}
+          onClick={handleKeyBoardShow}
           onKeyDown={(e) => handleKeyDown(e)}
           tabIndex={0}
           inputMode="numeric"
         >
-          <form
-            onSubmit={handleSubmit}
-            className={styles.form_container}
-            onClick={handleKeyBoardShow}
-          >
+          <form onSubmit={handleSubmit} className={styles.form_container}>
             {OTP.map((digit, index) => (
               <div
                 key={index}

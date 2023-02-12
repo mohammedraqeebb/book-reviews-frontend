@@ -32,8 +32,10 @@ const Home: NextPage<HomePageProps> = ({ mostLikedBooks }) => {
 export default Home;
 
 export async function getServerSideProps(context: NextPageContext) {
+  const client = buildClient(context);
+
   const [{ data: mostLikedbooks }] = await Promise.all([
-    await axios.get(`${BACKEND_URL}/book/likes/mostliked`),
+    await client.get(`${BACKEND_URL}/book/likes/mostliked`),
   ]);
 
   return {

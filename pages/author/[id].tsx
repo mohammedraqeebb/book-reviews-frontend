@@ -6,6 +6,7 @@ import { BACKEND_URL } from '../_app';
 import styles from '../../styles/AuthorDetails.module.scss';
 import BookDetailsSearch from '../../components/book-details-search/book-details-search. component';
 import { convertToWordedDate } from '../../util/convert-to-worded-date';
+import buildClient from '../../api/build-client';
 
 type AuthorDetailsProps = {
   id: string;
@@ -72,8 +73,9 @@ export default AuthorDetails;
 
 export const getServerSideProps = async (context: NextPageContext) => {
   const authorId = context.query.id;
+  const client = buildClient(context);
 
-  const { data } = await axios.get(`${BACKEND_URL}/author/${authorId}`);
+  const { data } = await client.get(`${BACKEND_URL}/author/${authorId}`);
   return {
     props: {
       ...data.author,

@@ -7,6 +7,7 @@ import { BACKEND_URL } from '../_app';
 import styles from '../../styles/PublisherDetails.module.scss';
 import { convertToWordedDate } from '../../util/convert-to-worded-date';
 import { GrLocationPin } from 'react-icons/gr';
+import buildClient from '../../api/build-client';
 
 type PublisherDetailsProps = {
   id: string;
@@ -93,8 +94,8 @@ export default PublisherDetails;
 
 export const getServerSideProps = async (context: NextPageContext) => {
   const publisherId = context.query.id;
-
-  const { data } = await axios.get(`${BACKEND_URL}/publisher/${publisherId}`);
+  const client = buildClient(context);
+  const { data } = await client.get(`${BACKEND_URL}/publisher/${publisherId}`);
   return {
     props: {
       ...data.publisher,
