@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { NextPage, NextPageContext } from 'next';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import buildClient from '../util/build-client';
 import BooksList from '../components/books-list/books-list.component';
 import styles from '../styles/Home.module.scss';
@@ -12,7 +12,17 @@ type HomePageProps = {
   mostLikedBooks: Book[];
 };
 
-const Home: NextPage<HomePageProps> = ({ mostLikedBooks }) => {
+const Home: NextPage<HomePageProps> = ({}) => {
+  const [mostLikedBooks, setMostLikedBooks] = useState<Book[]>([]);
+  const fetchData = async () => {
+    const [{ data: mostLikedBooksData }] = await Promise.all([
+      await axios.get(`${BACKEND_URL}/book/likes/mostliked`),
+    ]);
+    setMostLikedBooks(mostLikedBooksData.books);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
       <Head>
@@ -31,16 +41,16 @@ const Home: NextPage<HomePageProps> = ({ mostLikedBooks }) => {
 };
 export default Home;
 
-export async function getServerSideProps(context: NextPageContext) {
-  const client = buildClient(context);
+// export async function getServerSideProps(context: NextPageContext) {
+//   const client = buildClient(context);
 
-  const [{ data: mostLikedbooks }] = await Promise.all([
-    await client.get(`${BACKEND_URL}/book/likes/mostliked`),
-  ]);
+//   const [{ data: mostLikedbooks }] = await Promise.all([
+//     await client.get(`${BACKEND_URL}/book/likes/mostliked`),
+//   ]);
 
-  return {
-    props: {
-      mostLikedBooks: mostLikedbooks.books,
-    },
-  };
-}
+//   return {
+//     props: {
+//       mostLikedBooks: mostLikedbooks.books,
+//     },
+//   };
+// }

@@ -9,6 +9,7 @@ import Portal from '../hoc/portal';
 
 export const BACKEND_URL =
   'https://book-reviews-backend-latest.onrender.com/api';
+// export const BACKEND_URL = 'http://localhost:5000/api';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
