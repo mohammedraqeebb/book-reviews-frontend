@@ -6,7 +6,7 @@ import { BACKEND_URL } from '../_app';
 import styles from '../../styles/AuthorDetails.module.scss';
 import BookDetailsSearch from '../../components/book-details-search/book-details-search. component';
 import { convertToWordedDate } from '../../util/convert-to-worded-date';
-import buildClient from '../../api/build-client';
+import buildClient from '../../util/build-client';
 
 type AuthorDetailsProps = {
   id: string;

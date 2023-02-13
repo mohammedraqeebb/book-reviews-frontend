@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { NextPage, NextPageContext } from 'next';
 import React, { useEffect, useState } from 'react';
-import buildClient from '../api/build-client';
+import buildClient from '../util/build-client';
 import BookDetailsSearch from '../components/book-details-search/book-details-search. component';
 import SavedBooksList from '../components/saved-books-list/saved-books-list.component';
 import useRequest from '../hooks/use-request';

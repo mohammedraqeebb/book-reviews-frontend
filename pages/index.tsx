@@ -2,7 +2,7 @@ import axios from 'axios';
 import { NextPage, NextPageContext } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
-import buildClient from '../api/build-client';
+import buildClient from '../util/build-client';
 import BooksList from '../components/books-list/books-list.component';
 import styles from '../styles/Home.module.scss';
 import { Book } from './search';

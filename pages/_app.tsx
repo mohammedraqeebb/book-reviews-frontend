@@ -2,7 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Header from '../components/header/header.component';
 import Navbar from '../components/navbar/navbar.component';
-import buildClient from '../api/build-client';
+import buildClient from '../util/build-client';
 import { Provider } from 'react-redux';
 import { store } from '../app/store';
 import Portal from '../hoc/portal';
