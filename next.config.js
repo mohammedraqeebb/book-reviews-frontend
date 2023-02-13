@@ -18,12 +18,12 @@ module.exports = {
   //     }
   //   ]
   // }
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://book-reviews-backend-latest.onrender.com/:path*',
-      },
-    ]
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: 'https://book-reviews-backend-latest.onrender.com/:path*',
+  //     },
+  //   ]
+  // },
 }
